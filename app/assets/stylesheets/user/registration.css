@@ -1,0 +1,15 @@
+.sign-up {
+  background-color: rgb(214, 213, 203);
+  height: 100vh;
+  display: flex;
+  text-decoration: c ;
+}
+
+.registration-main {
+  padding: 50px 50px;
+  /* text-align:center; */
+}
+
+.header-text {
+  padding: 30px;
+}
