@@ -1,0 +1,34 @@
+<header>
+  <div class="top-page-header">
+    <div class="title">
+      <%= link_to "Thinking", "/", class:"top-title" %>
+    </div>
+    <ul class="navi">
+      <li>
+        <%= link_to "ログイン", "#", class:"login" %>
+      <li>
+      <li>
+        <%= link_to "新規登録", "#", class:"sign-up" %>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<div class="main">
+  <div class="said-bar">
+    <div class="new-btn">
+      <%= link_to "新しい目標！！", "#", class:"new-content" %>
+    </div>
+  </div>
+  <div class="item-contents">
+    <ul class="tink-list">
+      <% @fragments.each do | fragment |%>
+        <li class="list">
+          <%= link_to "#{fragment.title}", "#", class:"f-title" %>
+          <%= fragment.genre %>
+          <%= fragment.user_id%>
+        </li>
+      <% end %>
+    </ul>
+  </div>  
+</div>
