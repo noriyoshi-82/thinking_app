@@ -25,7 +25,7 @@
   color: rgb(15, 112, 15);
 }
 
-.login, .sign-up {
+.login, .sign-up, .log-out, .user-nickname {
   text-decoration: none;
   color: rgb(94, 94, 226);
 }
