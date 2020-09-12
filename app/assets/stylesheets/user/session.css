@@ -1,0 +1,35 @@
+.log-in-contents {
+  width: 100%;
+  background-color: rgb(207, 221, 207);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sessions-main {
+  width: 350px;
+  height: 350px;
+  padding: 30px 60px;
+  font-size: 20px;
+  background-color: white;
+  border: 1px solid rgba(150, 146, 146, 0.924);
+}
+
+/* 入力詳細 registration引用 */
+
+/* ログインボタン */
+.actions-log-in {
+  width: 100%;
+  padding-top: 45px;
+}
+
+.actions-log-in-btn {
+  width: 100%;
+  height: 35px;
+  margin: 5px 11px;
+  background-color: rgba(134, 202, 214, 0.876);
+  font-size: 20px;
+  border: 1px solid #ccc;
+  color: rgba(31, 31, 32, 0.726);
+}

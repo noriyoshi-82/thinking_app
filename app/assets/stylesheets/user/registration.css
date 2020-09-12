@@ -1,0 +1,69 @@
+.sign-up-contents {
+  width: 100%;
+  background-color: rgb(207, 221, 207);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.registration-main {
+  padding: 30px 60px;
+  font-size: 20px;
+  background-color: white;
+  border: 1px solid rgba(150, 146, 146, 0.924);
+}
+
+.header-text {
+  padding: 50px;
+  font-size: 30px;
+}
+
+/* 入力詳細 */
+.form-group {
+  padding-top: 20px;
+}
+
+.form-field {
+  padding-bottom: 5px;
+}
+
+.input-default {
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+}
+
+.indispensable {
+  color: rgb(233, 64, 64);
+  font-size: 14px;
+} 
+
+/* 登録ボタン */
+.actions {
+  width: 100%;
+  padding-top: 20px;
+}
+
+.actions-btn {
+  width: 100%;
+  height: 35px;
+  margin: 5px 11px;
+  background-color: rgba(134, 202, 214, 0.876);
+  font-size: 20px;
+  border: 1px solid #ccc;
+  color: rgba(31, 31, 32, 0.726);
+}
+
+/* ログイン画面遷移 */
+.login-btn {
+  font-size: 13px;
+  padding-top: 10px;
+  margin: 0px 11px;
+}
+
+.login-btn-text {
+  text-decoration: none;
+  color: red;
+}

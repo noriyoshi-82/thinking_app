@@ -1,0 +1,32 @@
+/* ヘッダー */
+.top-page-header {
+  width: 100vw;
+  height: 110px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(183, 218, 207);
+}
+
+.title {
+  font-size: 40px;
+  margin: 10px 10px 10px 50px;
+}
+
+.navi {
+  width: 200px;
+  display: flex;
+  justify-content: space-around;
+  margin-right: 50px;
+  font-size: 20px;
+}
+
+.top-title {
+  text-decoration: none;
+  color: rgb(80, 196, 80);
+}
+
+.login, .sign-up, .log-out, .user-nickname {
+  text-decoration: none;
+  color: rgb(94, 94, 226);
+}
