@@ -1,19 +1,22 @@
 .log-in-contents {
   width: 100%;
-  background-color: rgb(207, 221, 207);
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-image: url("../image-1.jpg");
+  background-size: cover;
 }
 
 .sessions-main {
   width: 350px;
-  height: 350px;
+  height: 400px;
   padding: 30px 60px;
+  margin-top: 120px;
   font-size: 20px;
   background-color: white;
   border: 1px solid rgba(150, 146, 146, 0.924);
+  border-radius: 3%;
 }
 
 /* 入力詳細 registration引用 */
