@@ -1,0 +1,32 @@
+<%= render "shared/header" %>
+
+<div class="fragment-main">
+  <%= form_with model: @fragment, url: user_registration_path, class: "fragment-form", local: true do |f| %>
+    <div class="title-name">
+      <%= f.text_field :title, class:"input-fragment", id:"title", placeholder:"例) title", maxlength:"40" %>
+    </div>
+    <div class="fragment-box">
+      <div class="fragment-item">
+        <ul>
+          <%= f.text_field :first, class:"input-fragment", id:"first", placeholder:"", maxlength:"40" %>
+          <li><%= f.text_field :first, class:"input-fragment", id:"first", placeholder:"", maxlength:"40" %></li>
+          <li><%= f.text_field :first, class:"input-fragment", id:"first", placeholder:"", maxlength:"40" %></li>
+        </ul>
+      </div>
+      <div class="fragment-item">
+        <ul>
+          <%= f.text_field :first, class:"input-fragment", id:"first", placeholder:"", maxlength:"40" %>
+          <li><%= f.text_field :first, class:"input-fragment", id:"first", placeholder:"", maxlength:"40" %></li>
+          <li><%= f.text_field :first, class:"input-fragment", id:"first", placeholder:"", maxlength:"40" %></li>
+        </ul>
+      </div>
+      <div class="fragment-item">
+        <ul>
+          <%= f.text_field :first, class:"input-fragment", id:"first", placeholder:"", maxlength:"40" %>
+          <li><%= f.text_field :first, class:"input-fragment", id:"first", placeholder:"", maxlength:"40" %></li>
+          <li><%= f.text_field :first, class:"input-fragment", id:"first", placeholder:"", maxlength:"40" %></li>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+</div>
