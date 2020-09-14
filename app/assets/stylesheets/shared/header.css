@@ -5,7 +5,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
+  background-color: whitesmoke;
+  filter: drop-shadow(0 0 15px rgb(102, 101, 101));
 }
 
 .title {
