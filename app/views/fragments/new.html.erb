@@ -1,32 +1,38 @@
 <%= render "shared/header" %>
 
 <div class="fragment-main">
-  <%= form_with model: @fragment, url: user_registration_path, class: "fragment-form", local: true do |f| %>
+  <%= form_with model: @fragment, url: fragments_path, class: "fragment-form", local: true do |f| %>
     <div class="title-name">
-      <%= f.text_field :title, class:"input-fragment", id:"title", placeholder:"例) title", maxlength:"40" %>
+      <%= f.text_field :title, class:"input-fragment", id:"title", placeholder:" 例) 目標を掲げよう！", maxlength:"40" %>
     </div>
     <div class="fragment-box">
       <div class="fragment-item">
         <ul>
-          <%= f.text_field :first, class:"input-fragment", id:"first", placeholder:"", maxlength:"40" %>
-          <li><%= f.text_field :first, class:"input-fragment", id:"first", placeholder:"", maxlength:"40" %></li>
-          <li><%= f.text_field :first, class:"input-fragment", id:"first", placeholder:"", maxlength:"40" %></li>
+          <%= f.text_field :heading_a, class:"input-fragment", id:"first", placeholder:" 達成するには？", maxlength:"40" %>
+          <li class="input-memo"><%= f.text_field :heading_a_a, class:"input-fragment", id:"first", placeholder:" まずはこれから！", maxlength:"40" %></li>
+          <li class="input-memo"><%= f.text_field :heading_a_b, class:"input-fragment", id:"first", placeholder:" まずはこれから！", maxlength:"40" %></li>
         </ul>
       </div>
       <div class="fragment-item">
         <ul>
-          <%= f.text_field :first, class:"input-fragment", id:"first", placeholder:"", maxlength:"40" %>
-          <li><%= f.text_field :first, class:"input-fragment", id:"first", placeholder:"", maxlength:"40" %></li>
-          <li><%= f.text_field :first, class:"input-fragment", id:"first", placeholder:"", maxlength:"40" %></li>
+          <%= f.text_field :heading_b, class:"input-fragment", id:"first", placeholder:" 例) 毎日筋トレ", maxlength:"40" %>
+          <li class="input-memo"><%= f.text_field :heading_b_a, class:"input-fragment", id:"first", placeholder:" 例) 腹筋20回", maxlength:"40" %></li>
+          <li class="input-memo"><%= f.text_field :heading_b_b, class:"input-fragment", id:"first", placeholder:" 例) 腕立て20回...etc", maxlength:"40" %></li>
         </ul>
       </div>
       <div class="fragment-item">
         <ul>
-          <%= f.text_field :first, class:"input-fragment", id:"first", placeholder:"", maxlength:"40" %>
-          <li><%= f.text_field :first, class:"input-fragment", id:"first", placeholder:"", maxlength:"40" %></li>
-          <li><%= f.text_field :first, class:"input-fragment", id:"first", placeholder:"", maxlength:"40" %></li>
+          <%= f.text_field :heading_c, class:"input-fragment", id:"heading_c", placeholder:" hoge ", maxlength:"40" %>
+          <li class="input-memo"><%= f.text_field :heading_c_a, class:"input-fragment", id:"first", placeholder:" hoge ", maxlength:"40" %></li>
+          <li class="input-memo"><%= f.text_field :heading_c_b, class:"input-fragment", id:"first", placeholder:" hoge ", maxlength:"40" %></li>
         </ul>
       </div>
     </div>
+    <div class="free-space">
+       <%= f.text_area :free_memo, class:"input-free", id:"free_memo", placeholder:" 備考欄: 例)参考Youtube URL, 決意表明etc... ", maxlength:"200" %>
+    </div>
+    <div class="flagment-footer">
+      <%= f.submit "これで決定!!", class:"fragment-btn" %>
+    </div> 
   <% end %>
 </div>

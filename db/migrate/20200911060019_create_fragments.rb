@@ -12,6 +12,7 @@ class CreateFragments < ActiveRecord::Migration[6.0]
       t.text :heading_b_b
       t.text :heading_c_a
       t.text :heading_c_b
+      t.text :free_memo
       t.integer :user_id,     null: false, foreign_key: true
       t.timestamps
     end
