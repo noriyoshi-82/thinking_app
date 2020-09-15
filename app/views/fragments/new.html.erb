@@ -4,6 +4,7 @@
   <%= form_with model: @fragment, url: fragments_path, class: "fragment-form", local: true do |f| %>
     <div class="title-name">
       <%= f.text_field :title, class:"input-fragment", id:"title", placeholder:" 例) 目標を掲げよう！", maxlength:"40" %>
+      <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"genre-select"}) %>
     </div>
     <div class="fragment-box">
       <div class="fragment-item">
@@ -32,7 +33,6 @@
        <%= f.text_area :free_memo, class:"input-free", id:"free_memo", placeholder:" 備考欄: 例)参考Youtube URL, 決意表明etc... ", maxlength:"200" %>
     </div>
     <div class="flagment-footer">
-      <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"genre-select"}) %>
       <%= f.submit "これで決定!!", class:"fragment-btn" %>
     </div> 
   <% end %>

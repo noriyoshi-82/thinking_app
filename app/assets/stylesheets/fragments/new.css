@@ -62,3 +62,11 @@
   padding: 10px 20px;
   background-color: rgba(228, 239, 241, 0.431);
 }
+
+.genre-select {
+  font-size: 17px;
+  padding: 10px 30px;
+  margin-left: 5px;
+  border: none;
+  color: gray;
+}
