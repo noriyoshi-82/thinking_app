@@ -16,6 +16,11 @@ class FragmentsController < ApplicationController
     end
   end
 
+  def show
+    @fragment = Fragment.find_by(params[:id])
+  end
+  
+
   private
 
   def fragment_params

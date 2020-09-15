@@ -1,0 +1,46 @@
+<%= render "shared/header" %>
+<div class="fragment-main">
+   <div class="fragment-form">
+    <div class="title-name">
+      <div class="input-fragment"><%= @fragment.title %></div>
+      <div class="genre-select"><%= @fragment.genre.name %></div>
+    </div>
+    <div class="fragment-box">
+      <div class="fragment-item">
+        <ul>
+          <div class="input-fragment"><%= @fragment.heading_a%></div>
+          <li class="input-memo">
+            <div class="input-fragment"><%= @fragment.heading_a_a%></div>
+          </li>
+          <li class="input-memo">
+            <div class="input-fragment"><%= @fragment.heading_a_b%></div>
+          </li>
+        </ul>
+      </div>
+      <div class="fragment-item">
+        <ul>
+          <div class="input-fragment"><%= @fragment.heading_b%></div>
+          <li class="input-memo">
+            <div class="input-fragment"><%= @fragment.heading_b_a%></div>
+          </li>
+          <li class="input-memo">
+            <div class="input-fragment"><%= @fragment.heading_b_b%></div>
+          </li>
+        </ul>
+      </div>
+      <div class="fragment-item">
+        <ul>
+          <div class="input-fragment"><%= @fragment.heading_c%></div>
+          <li class="input-memo">
+            <div class="input-fragment"><%= @fragment.heading_c_a%></div>
+          </li>
+          <li class="input-memo">
+            <div class="input-fragment"><%= @fragment.heading_c_b%></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="free-space">
+      <div class="nput-free"><%= @fragment.free_memo %></div>
+    </div>
+</div>
