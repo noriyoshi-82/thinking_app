@@ -4,34 +4,34 @@ describe User do
     @user = FactoryBot.build(:user)
   end
 
-  describe "ユーザ新規登録" do
-    context "新規登録がうまくいくとき" do
+  describe 'ユーザ新規登録' do
+    context '新規登録がうまくいくとき' do
       it '全ての項目が存在すれば登録できる' do
         expect(@user).to be_valid
       end
-      it "passwordが英数字６文字以上であれば登録できる" do
-        @user.password = "000aaa"
-        @user.password_confirmation = "000aaa"
+      it 'passwordが英数字６文字以上であれば登録できる' do
+        @user.password = '000aaa'
+        @user.password_confirmation = '000aaa'
         expect(@user).to be_valid
       end
     end
 
-    context "新規登録がうまくいかないとき" do
-      it "nicknameが空だと登録できない" do
+    context '新規登録がうまくいかないとき' do
+      it 'nicknameが空だと登録できない' do
         @user.nickname = ''
         @user.valid?
         expect(@user.errors.full_messages).to include("Nickname can't be blank")
       end
-      it "emailが空だと登録できない" do
+      it 'emailが空だと登録できない' do
         @user.email = ''
         @user.valid?
         expect(@user.errors.full_messages).to include("Email can't be blank")
       end
-      it "emailに@を含まなければ登録できない" do
-        @user.email = "aaaaaa"
+      it 'emailに@を含まなければ登録できない' do
+        @user.email = 'aaaaaa'
         @user.valid?
       end
-      it "重複したemailが存在する場合登録できない" do
+      it '重複したemailが存在する場合登録できない' do
         @user.save
         another_user = FactoryBot.build(:user)
         another_user.valid?
@@ -57,5 +57,5 @@ describe User do
         expect(@user.errors.full_messages).to include("Password confirmation doesn't match Password")
       end
     end
-  end  
+  end
 end
