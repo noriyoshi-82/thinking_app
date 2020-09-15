@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2020_09_11_123400) do
 
   create_table "fragments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "title", null: false
-    t.integer "genre", null: false
+    t.integer "genre_id", null: false
     t.text "heading_a", null: false
     t.text "heading_b"
     t.text "heading_c"

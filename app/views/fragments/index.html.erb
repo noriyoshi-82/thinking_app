@@ -15,7 +15,7 @@
       <% @fragments.each do | fragment |%>
         <li class="list">
           <%= link_to "#{fragment.title}", "#", class:"f-title" %>
-          <%= fragment.genre %>
+          <%= fragment.genre.name %>
           <%= fragment.user.nickname%>
         </li>
       <% end %>

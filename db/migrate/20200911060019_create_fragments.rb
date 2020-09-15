@@ -2,7 +2,7 @@ class CreateFragments < ActiveRecord::Migration[6.0]
   def change
     create_table :fragments do |t|
       t.text :title,       null: false
-      t.integer :genre,    null: false
+      t.integer :genre_id,    null: false
       t.text :heading_a,   null: false
       t.text :heading_b
       t.text :heading_c

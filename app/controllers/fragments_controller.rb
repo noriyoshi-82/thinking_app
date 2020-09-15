@@ -19,6 +19,6 @@ class FragmentsController < ApplicationController
 
   private
   def fragment_params
-    params.require(:fragment).permit(:title, :genre, :heading_a, :heading_b, :heading_c, :heading_a_a, :heading_a_b, :heading_b_a, :heading_b_b, :heading_c_a, :heading_c_b, :free_memo).merge(user_id: current_user.id)
+    params.require(:fragment).permit(:title, :genre_id, :heading_a, :heading_b, :heading_c, :heading_a_a, :heading_a_b, :heading_b_a, :heading_b_b, :heading_c_a, :heading_c_b, :free_memo).merge(user_id: current_user.id)
   end
 end
