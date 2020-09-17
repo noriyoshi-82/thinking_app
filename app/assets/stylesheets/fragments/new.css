@@ -3,6 +3,7 @@
   background-image: url("../image-2.jpg");
   background-size: cover;
   padding-top: 50px;
+  filter: contrast(100%);
 }
 
 .fragment-box {

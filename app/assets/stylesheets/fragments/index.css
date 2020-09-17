@@ -7,6 +7,7 @@
   background-size: cover;
   flex-direction: column;
   align-items: center;
+  filter: contrast(100%);
 }
 
 .new-btn {
@@ -39,7 +40,7 @@
 /* 一覧表示 */
 .item-contents {
   width: 900px;
-  height: 700px;
+  height: 500px;
   background-color: rgba(248, 240, 225, 0.424);
   filter: drop-shadow(0 0 15px rgb(102, 101, 101));
   overflow: scroll;
@@ -63,6 +64,7 @@
 
 .list-up{
   display: flex;
+  justify-content: space-around;
   padding: 3px;
 }
 
