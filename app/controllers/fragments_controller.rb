@@ -1,6 +1,7 @@
 class FragmentsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
   def index
-    @fragments = Fragment.all
+    @fragments = Fragment.all.order('created_at DESC')
   end
 
   def new
