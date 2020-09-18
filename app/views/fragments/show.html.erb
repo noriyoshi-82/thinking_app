@@ -1,6 +1,6 @@
 <%= render "shared/header" %>
 <div class="fragment-main">
-   <div class="fragment-form">
+  <div class="fragment-form">
     <div class="title-name">
       <div class="show-fragment"><%= @fragment.title %></div>
     </div>
@@ -39,7 +39,10 @@
         </ul>
       </div>
     </div>
-    <div class="under-space">
-      <%= @fragment.free_memo %></div>
-    </div>
+    <% if @fragment.free_memo? %>
+      <div class="under-space">
+        <%= @fragment.free_memo %>
+      </div>
+    <% end %>
+  </div>
 </div>

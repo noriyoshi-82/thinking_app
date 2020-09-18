@@ -5,13 +5,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: whitesmoke;
-  filter: drop-shadow(0 0 15px rgb(102, 101, 101));
+  background-color: rgba(0, 0, 0, 0.198);
 }
 
 .title {
   font-family: 'Comic Sans MS';
-  font-size: 40px;
+  font-size: 50px;
   margin: 10px 10px 10px 50px;
 }
 
@@ -20,15 +19,17 @@
   display: flex;
   justify-content: space-around;
   margin-right: 50px;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .top-title {
   text-decoration: none;
-  color: rgb(80, 196, 80);
+  color: rgba(255, 255, 255, 0.931);
+  filter: drop-shadow(0 0 5px rgb(68, 67, 67));
 }
 
 .login, .sign-up, .log-out, .user-nickname {
   text-decoration: none;
-  color: rgb(94, 94, 226);
+  color: rgba(255, 255, 255, 0.931);
+  filter: drop-shadow(0 0 5px rgb(68, 67, 67));
 }
