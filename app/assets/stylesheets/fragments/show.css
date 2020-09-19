@@ -21,3 +21,25 @@ padding: 10px 10px;
 word-break: normal;
 white-space: pre-line;
 }
+
+.comment-form{
+  display: flex;
+  
+}
+.comennt-left {
+  width: 650px;
+}
+
+.comment {
+  width: 90%;
+  resize: none;
+  margin: 0 10px;
+  padding: 5px;
+  font-size: 18px;
+  height: 30px;
+}
+
+.comment-btn {
+  padding: 5px 25px;
+  font-size: 16px;
+}

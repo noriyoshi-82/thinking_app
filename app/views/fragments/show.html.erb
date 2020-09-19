@@ -44,5 +44,17 @@
         <%= @fragment.free_memo %>
       </div>
     <% end %>
+    <%= form_with model: @fragment, url: fragments_path, class: "comment-form", local: true do |f| %>
+    <div class="comennt-left">
+      <%= f.text_area :comment, class:"comment", id:"comment", placeholder:"コメントしよう!!", maxlength:"200" %>
+    </div>
+    <div class="comment-right">
+      <%= f.submit "投稿", class:"comment-btn" %>
+    </div>
+    <% end %>
+  </div>
+  <div class="comment-field">
+  
   </div>
 </div>
+
