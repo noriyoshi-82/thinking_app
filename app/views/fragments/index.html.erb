@@ -2,7 +2,9 @@
 <div class="main">
   <div class="tool-bar">
     <div class="new-btn">
-      <%= link_to "新しい目標！！", new_fragment_path, class:"new-content" %>
+      <%= link_to new_fragment_path do %>
+        <i class="fas fa-edit"></i> "新しい目標を立てよう"
+      <% end %>
     </div>
     <div class="nickname">
       <% if user_signed_in? %>
@@ -17,7 +19,11 @@
           <div class="list-up">
             <div class="list-a">Name:<%= fragment.user.nickname%></div>
             <div class="list-a">Category:<%= fragment.genre.name %></div>
-            <div class="list-a-btn"><%= link_to "check!!", fragment_path(fragment.id), class:"f-title"%></div>
+            <div class="list-a-btn">
+              <%= link_to fragment_path(fragment.id) do %>
+                <i class="far fa-hand-point-right"></i> cheak!!
+              <% end %>
+            </div>
           </div>
           <div class="list-down">
             Title:<%= fragment.title %>

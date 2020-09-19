@@ -26,10 +26,14 @@
 }
 
 .new-content {
-  text-decoration: none;
-  color: black;
   padding: 20px;
 }
+.new-btn a {
+  text-decoration: none;
+  color: rgb(44, 43, 43);
+  font-size: 25px;
+ }
+
 
 .nickname {
   font-size: 30px;
@@ -78,5 +82,12 @@
 
 .list-a-btn {
   margin-left: 300px;
-  filter: drop-shadow( 2px 4px 6px rgb(207, 2, 2));
+}
+
+.list-a-btn a {
+  text-decoration: none;
+  color: rgb(221, 36, 36);
+}
+.list-a-btn i {
+  color: #242323;
 }
