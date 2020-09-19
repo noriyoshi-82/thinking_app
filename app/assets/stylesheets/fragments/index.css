@@ -7,6 +7,7 @@
   background-size: cover;
   flex-direction: column;
   align-items: center;
+  filter: contrast(100%);
 }
 
 .new-btn {
@@ -25,10 +26,14 @@
 }
 
 .new-content {
-  text-decoration: none;
-  color: black;
   padding: 20px;
 }
+.new-btn a {
+  text-decoration: none;
+  color: rgb(44, 43, 43);
+  font-size: 25px;
+ }
+
 
 .nickname {
   font-size: 30px;
@@ -39,7 +44,7 @@
 /* 一覧表示 */
 .item-contents {
   width: 900px;
-  height: 700px;
+  height: 500px;
   background-color: rgba(248, 240, 225, 0.424);
   filter: drop-shadow(0 0 15px rgb(102, 101, 101));
   overflow: scroll;
@@ -63,6 +68,7 @@
 
 .list-up{
   display: flex;
+  justify-content: space-around;
   padding: 3px;
 }
 
@@ -76,5 +82,12 @@
 
 .list-a-btn {
   margin-left: 300px;
-  background-color: rgb(241, 210, 210);
+}
+
+.list-a-btn a {
+  text-decoration: none;
+  color: rgb(221, 36, 36);
+}
+.list-a-btn i {
+  color: #242323;
 }

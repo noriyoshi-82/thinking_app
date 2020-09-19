@@ -1,0 +1,23 @@
+.show-fragment {
+  height: 45px;
+  width: 365px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  border-bottom: 3px solid rgb(201, 198, 198);
+  /* background-color: rgb(255, 255, 255); */
+  display: table-cell;
+  vertical-align: middle;
+  border-radius: 3%;
+  overflow-x: scroll;
+  white-space: nowrap
+}
+
+.under-space {
+background-color: rgb(255, 255, 255);
+border: 3px solid rgb(201, 198, 198);
+margin: 30px 20px;
+font-size: 20px;
+padding: 10px 10px;
+word-break: normal;
+white-space: pre-line;
+}
