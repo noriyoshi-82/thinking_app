@@ -1,6 +1,6 @@
 <%= render "shared/header" %>
 <div class="fragment-main">
-  <div class="fragment-form">
+  <div class="fragment-show-form">
     <div class="title-name">
       <div class="show-fragment"><%= @fragment.title %></div>
     </div>
@@ -44,7 +44,7 @@
         <%= @fragment.free_memo %>
       </div>
     <% end %>
-    <%= form_with model: @fragment, url: fragments_path, class: "comment-form", local: true do |f| %>
+    <%= form_with model: @comment, url: comments_path(@fragment.id), class: "comment-form", remote: true do |f| %>
     <div class="comennt-left">
       <%= f.text_area :comment, class:"comment", id:"comment", placeholder:"コメントしよう!!", maxlength:"200" %>
     </div>
@@ -52,9 +52,11 @@
       <%= f.submit "投稿", class:"comment-btn" %>
     </div>
     <% end %>
+    <div id="comment-field">
+    <% @comments.reverse_each do |comment| %>
+      <p><%= comment.comment %>   /name:  <%= comment.user.nickname %></p>
+    <% end %>
   </div>
-  <div class="comment-field">
-  
   </div>
 </div>
 
