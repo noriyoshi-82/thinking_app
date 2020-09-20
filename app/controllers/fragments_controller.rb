@@ -19,7 +19,7 @@ class FragmentsController < ApplicationController
 
   def show
     @fragment = Fragment.find(params[:id])
-    @comments = Comment.all
+    @comments = @fragment.comments
     @comment = Comment.new
   end
   
