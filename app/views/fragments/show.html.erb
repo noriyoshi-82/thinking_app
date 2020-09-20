@@ -54,7 +54,7 @@
     <% end %>
     <div id="comment-field">
     <% @comments.reverse_each do |comment| %>
-      <p><%= comment.comment %>   /name:  <%= comment.user.nickname %></p>
+      <p><%= comment.user.nickname %> : <%= comment.comment %>  <a><%= l comment.created_at %></a></p>
     <% end %>
   </div>
   </div>

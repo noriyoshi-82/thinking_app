@@ -11,10 +11,11 @@ consumer.subscriptions.create("CommentChannel", {
 
   received(data) {
     // Called when there's incoming data on the websocket for this channel
-    const html = `<p>${data.content.comment}   /name: ${ data.user.nickname }</p>`;
+    const html = `<p>${ data.user.nickname } :${data.content.comment} </p>`;
     const comments = document.getElementById('comment-field');
     const newComment = document.getElementById('comment');
     comments.insertAdjacentHTML('afterbegin', html);
     newComment.value='';
   }
 });
+// ${comment.created_at.strftime("%Y%m%d")}

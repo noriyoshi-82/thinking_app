@@ -58,3 +58,8 @@ white-space: pre-line;
   font-size: 18px;
   padding: 15px;
 }
+
+#comment-field a {
+  color: rgba(84, 138, 138, 0.666);
+  font-size: 13px;
+}
