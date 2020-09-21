@@ -3,6 +3,13 @@
   <div class="fragment-show-form">
     <div class="title-name">
       <div class="show-fragment"><%= @fragment.title %></div>
+      <div class="like">
+      <%= form_with model: @comment, url: "#", class: "like-form", remote: true do |f| %>
+        <%= f.button :type => "submit", id: "like-btn", style: 'border-style: none;' do %>
+        <i class="far fa-grin-wink"></i>  fight!!
+        <% end %>
+      <% end %>
+      </div>
     </div>
     <div class="fragment-box">
       <div class="fragment-item">
