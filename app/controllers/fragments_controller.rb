@@ -21,6 +21,8 @@ class FragmentsController < ApplicationController
     @fragment = Fragment.find(params[:id])
     @comments = @fragment.comments
     @comment = Comment.new
+    @like =  Like.where(fragment_id: @fragment.id, user_id: current_user.id)
+    @like_count = @like.count
   end
   
 

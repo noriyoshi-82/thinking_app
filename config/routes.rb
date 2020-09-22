@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :fragments, only: [:index, :new, :create, :show] do
     member do
       resources :comments, only: [:create]
+      resources :likes, only: [:create, :destroy]
     end
   end
 end
