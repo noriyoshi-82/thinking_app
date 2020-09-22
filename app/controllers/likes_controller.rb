@@ -9,10 +9,4 @@ class LikesController < ApplicationController
       ActionCable.server.broadcast 'like_channel', content: @like, count: @like_count 
     end
   end
-  def destroy
-    @like = Like.new(user_id: current_user.id, fragment_id: params[:id])
-    @like.destroy
-    ActionCable.server.broadcast 'like_channel', content: @like
-  end
-  
 end
