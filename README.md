@@ -2,7 +2,9 @@
 
 "Thinking"は目標を細分化することで、目標達成するためのToDoをまとめることができます。
 *他のユーザーと目標へのToDoを共有することができます。
+
 *参考にしている書籍や動画等あれば共有することができます。
+
 *コメント機能でアドバイスや応援等をすることができます。
 
 設定した目標を達成するため、小さいことからコツコツ取り組めるように可視化
@@ -36,10 +38,15 @@
 
 ### Association
 has_many :fragments
+
 has_many :comments
+
 has_many :fragments, through: :comments
+
 has_many :likes
+
 has_many :fragments, through: :likes
+
 
 ## fragmentsテーブル
 | column          | Type     | Option                        |
@@ -60,11 +67,17 @@ has_many :fragments, through: :likes
 
 ### Association
 belongs_to :user
+
 belongs_to_active_hash :genre
+
 has_many :comments
+
 has_many :users, through: :comments
+
 has_many likes
+
 has_many :users, through: :likes
+
 
 ## commentテーブル
 | colum       | Type    | Option                        |
@@ -75,7 +88,9 @@ has_many :users, through: :likes
 
 ### Association
 belongs_to :user
+
 belongs _to :fragment
+
 
 ## likeテーブル
 | colum       | Type    | Option                        |
@@ -85,5 +100,7 @@ belongs _to :fragment
 
 ### Association
 belongs_to :user
+
 belongs_to :fragment
+
 
