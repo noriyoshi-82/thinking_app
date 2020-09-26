@@ -12,13 +12,15 @@
               <div id="like-p"><p><%= "#{@like_count}" %>人</p></div>
             <% end %>
           <% else %>
-            <div class="like-btn" >
-              <div id="icon-change"><i class="far fa-grin-wink" >good!!済み</i></div>
+            <%= form_with model: @like, url: like_path(@fragment.id, @like.id), id: "like-destroy", method: :delete, remote: true do |f| %>
+              <%= f.button type ="submit", class: "like-btn", style: 'border-style: none;' do %>
+                <div id="icon-change"><i class="far fa-grin-wink" >good!!済み</i></div>
+              <% end %>
               <div id="like-p"><p><%= "#{@like_count}" %>人</p></div>
-            </div>
+            <% end %>
           <% end %>
         </div>
-    </div>
+      </div>
     <div class="fragment-box">
       <div class="fragment-item">
         <ul>

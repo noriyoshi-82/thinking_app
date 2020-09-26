@@ -81,6 +81,6 @@ white-space: pre-line;
   padding: 10px;
 }
 
-#like-create {
+#like-create, #like-destroy {
   display: flex;
 }
