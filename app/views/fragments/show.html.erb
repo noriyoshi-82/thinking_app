@@ -3,7 +3,24 @@
   <div class="fragment-show-form">
     <div class="title-name">
       <div class="show-fragment"><%= @fragment.title %></div>
-    </div>
+        <div class="like">
+          <% unless Like.find_by(user_id: current_user.id, fragment_id: @fragment.id) %>
+            <%= form_with model: @like, url: likes_path(@fragment.id), id: "like-create", remote: true do |f| %>
+              <%= f.button type ="submit", class: "like-btn", style: 'border-style: none;' do %>
+                <div id="icon-create"><i class="far fa-grin-wink"> good!!</i></div>
+              <% end %>
+              <div id="like-p"><p><%= "#{@like_count}" %>人</p></div>
+            <% end %>
+          <% else %>
+            <%= form_with model: @like, url: like_path(@fragment.id, @like.id), id: "like-destroy", method: :delete, remote: true do |f| %>
+              <%= f.button type ="submit", class: "like-btn", style: 'border-style: none;' do %>
+                <div id="icon-change"><i class="far fa-grin-wink" >good!!済み</i></div>
+              <% end %>
+              <div id="like-p"><p><%= "#{@like_count}" %>人</p></div>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
     <div class="fragment-box">
       <div class="fragment-item">
         <ul>
