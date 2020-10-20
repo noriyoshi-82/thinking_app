@@ -2,6 +2,7 @@
 
 <div class="fragment-main">
   <%= form_with model: @fragment, url: fragments_path, class: "fragment-form", local: true do |f| %>
+  <%= render 'shared/error_messages', model: f.object %>
     <div class="title-name">
       <%= f.text_field :title, class:"input-fragment", id:"title", placeholder:" 目標を掲げよう！", maxlength:"40" %>
       <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"genre-select"}) %>
