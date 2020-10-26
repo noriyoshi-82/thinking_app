@@ -24,9 +24,9 @@ class FragmentsController < ApplicationController
     @like = Like.find_by(user_id: @fragment.user_id, fragment_id: @fragment.id)
     @like_count = Like.where(fragment_id: @fragment.id, user_id: current_user.id).count
   end
-  
 
   private
+
   def fragment_params
     params.require(:fragment).permit(:title, :genre_id, :heading_a, :heading_b, :heading_c, :heading_a_a, :heading_a_b, :heading_b_a, :heading_b_b, :heading_c_a, :heading_c_b, :free_memo).merge(user_id: current_user.id)
   end
