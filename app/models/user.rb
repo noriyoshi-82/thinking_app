@@ -12,4 +12,11 @@ class User < ApplicationRecord
   PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i.freeze
   validates_format_of :password, with: PASSWORD_REGEX, message: 'Include both letters and numbers'
   validates :nickname, presence: true
+
+  def self.guest
+    find_or_create_by(email: 'test@sampl.jp') do |user|
+      user.password = '111aaa'
+
+    end
+  end
 end
