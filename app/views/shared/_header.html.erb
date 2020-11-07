@@ -4,6 +4,7 @@
       <%= link_to "Thinking", "/", class:"top-title" %>
     </div>
     <ul class="navi">
+      <li><%= link_to  "ゲスト", users_guest_sign_in_path, method: :post %></li>
     <% unless user_signed_in? %>
       <li><%= link_to "ログイン", new_user_session_path, class:"login" %></li>
       <li><%= link_to "新規登録", new_user_registration_path, class:"sign-up" %></li>

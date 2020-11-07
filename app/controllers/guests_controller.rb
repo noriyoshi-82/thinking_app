@@ -1,8 +1,6 @@
-class GuestsController < ApplicationController
-  def new
-    user = User.find_or_create_by!(email: 'test@sample.jp') do |user|
-      user.password = SecureRandom.urlsafe_base64
-    end
+class Guests::SessionsController < Devise::SessionsController
+  def new_guest
+    user = User.guest
     sign_in user
     redirect_to root_path, notice: 'ゲストユーザーとしてログインしました。'
   end
