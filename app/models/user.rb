@@ -14,8 +14,9 @@ class User < ApplicationRecord
   validates :nickname, presence: true
 
   def self.guest
-    find_or_create_by(email: 'guest@example.com') do |user|
+    find_or_create_by(email: 'test@sampl.jp') do |user|
       user.password = '111aaa'
+
     end
   end
 end
