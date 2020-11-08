@@ -15,7 +15,7 @@
 }
 
 .navi {
-  width: 200px;
+  width: 400px;
   display: flex;
   justify-content: space-around;
   margin-right: 50px;
@@ -28,8 +28,9 @@
   filter: drop-shadow(0 0 5px rgb(68, 67, 67));
 }
 
-.login, .sign-up, .log-out, .user-nickname {
+.login, .sign-up, .log-out, .user-nickname, .guest {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.931);
   filter: drop-shadow(0 0 5px rgb(68, 67, 67));
 }
+
