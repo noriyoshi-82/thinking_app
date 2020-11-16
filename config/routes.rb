@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     post 'users/guest_sign_in', to: 'users/sessions#new_guest'
   end
   root "fragments#index"
-  resources :fragments, only: [:index, :new, :create, :show] do
+  resources :fragments, only: [:index, :new, :create, :show, :top] do
     member do
       resources :comments, only: [:create]
       resources :likes, only: [:create, :destroy]

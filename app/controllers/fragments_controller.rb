@@ -1,5 +1,5 @@
 class FragmentsController < ApplicationController
-  before_action :authenticate_user!, except: [:index]
+  before_action :authenticate_user!, except: [:top]
   def index
     @fragments = Fragment.all.order('created_at DESC')
   end
@@ -24,6 +24,10 @@ class FragmentsController < ApplicationController
     @like = Like.find_by(user_id: @fragment.user_id, fragment_id: @fragment.id)
     @like_count = Like.where(fragment_id: @fragment.id, user_id: current_user.id).count
   end
+
+  def top
+  end
+  
 
   private
 
