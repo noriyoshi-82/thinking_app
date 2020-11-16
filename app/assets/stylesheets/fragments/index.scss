@@ -11,8 +11,8 @@
 }
 
 .new-btn {
-  margin-left: 30px;
-  margin-top: 10px;
+  margin-left: 530px;
+  margin-top: 30px;
 }
 
 /* ツールバー */
@@ -36,7 +36,7 @@
 
 
 .nickname {
-  font-size: 30px;
+  font-size: 25px;
   margin-right: 60px;
   color: rgb(46, 44, 44);
 }
@@ -49,7 +49,17 @@
   filter: drop-shadow(0 0 15px rgb(102, 101, 101));
   overflow: scroll;
   border-radius: 1%;
+
+ #item-title{
+  font-size: 25px;
+  padding: 5px;
+  text-align: center;
+  color: rgba(245, 23, 57, 0.639);
+  background-color: rgba(255, 255, 255, 0.781);
 }
+}
+
+
 
 .list {
   width: 800px;
