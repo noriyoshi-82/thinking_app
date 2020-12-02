@@ -1,5 +1,5 @@
 class FragmentsController < ApplicationController
-  before_action :authenticate_user!, except: [:top]
+  before_action :authenticate_user!, except: [:index]
   def index
     @fragments = Fragment.all.order('created_at DESC')
   end
