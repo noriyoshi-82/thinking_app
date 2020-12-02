@@ -25,6 +25,10 @@ class FragmentsController < ApplicationController
     @like_count = Like.where(fragment_id: @fragment.id, user_id: current_user.id).count
   end
 
+  def top
+  end
+  
+
   private
 
   def fragment_params
